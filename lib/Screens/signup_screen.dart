@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:my_location/Screens/home_screen.dart';
 import 'package:my_location/user_helper.dart';
@@ -189,7 +190,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             height: 50.0,
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
-                                color: CustomColor.primaryColor,
+                                color: CustomColor.secondaryColor,
                                 spreadRadius: 5,
                                 blurRadius: 7,
                                 offset:
@@ -228,7 +229,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             height: 50.0,
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
-                                color: CustomColor.primaryColor,
+                                color: CustomColor.secondaryColor,
                                 spreadRadius: 5,
                                 blurRadius: 7,
                                 offset:
@@ -267,7 +268,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             height: 50.0,
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
-                                color: CustomColor.primaryColor,
+                                color: CustomColor.secondaryColor,
                                 spreadRadius: 5,
                                 blurRadius: 7,
                                 offset:
@@ -306,7 +307,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             height: 50.0,
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
-                                color: CustomColor.primaryColor,
+                                color: CustomColor.secondaryColor,
                                 spreadRadius: 5,
                                 blurRadius: 7,
                                 offset:
@@ -358,6 +359,9 @@ class _SignupScreenState extends State<SignupScreen> {
                                                 HomeScreen()));
                                   });
                                 });
+                              } else {
+                                EasyLoading.showError(
+                                    'Profile Picture not added/Empty fields');
                               }
                             },
                             child: Text(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:my_location/Screens/home_screen.dart';
 import 'package:my_location/Screens/login_screen.dart';
 import 'package:my_location/user_helper.dart';
@@ -44,6 +45,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      builder: EasyLoading.init(),
       home: isLoggedIn ? HomeScreen() : LoginScreen(),
     );
   }
